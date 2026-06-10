@@ -1,0 +1,19 @@
+{
+    "licenseKey": "COGNIFI-RLCFJ-93LV5-L24Q9-HHZ9C",
+    "email": "beta@cognifi.store",
+    "customerName": "Beta",
+    "licenseTier": "Personal",
+    "issuedAt": "2026-06-08T03:53:32.7517175Z",
+    "expiresAt": "2026-09-05T03:53:32.7517175Z",
+    "notes": null,
+    "keyId": "default",
+    "signature": "vxuzVmDnLWKZ7zNPbO6nFqVGe/1jgA1DcI+XMcQcfqo2k7KrWiKpMV6BmD0Sr62asLZNHCAdabU09X2PJtHoH1sagRZWtM9dvWr4YjasJvlSTEzABJw3k0PRihIQ0TXeH3HIarCwdUZuxogNPwkw0DdnQryFfgrFyTDEcqX/gh8fTmAe5aMXLlStEYr/GT6Rvrlo4rVLAhH5brP2WWE3LbSDOJsTGIxTsEJjQBEO179KGsNyD70JLFW1VFInvMSHxLJCvKoEaOqdISq9M7AT6c9DMDjHsWFmj4zKzhWN4yY3BDTXcnwiUh4OKSYYr1ZBSha4heBYqhxzvyJFZlkCTA==",
+    "features": {
+        "MaxUsers": 1,
+        "MaxTransactions": -1,
+        "AllowsAnalytics": true,
+        "AllowsMortgageTracking": true,
+        "AllowsWorkspaceSharing": false,
+        "AllowsApiAccess": false
+    }
+}
