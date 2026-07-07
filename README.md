@@ -86,8 +86,9 @@ CogniFi uses an update-entitlement model. Active testers can download and run al
 
 ### Obtain a Free Beta License
 During the beta cohort phase, we are issuing **90-day time-limited Personal Tier licenses** to all active testers. 
-- You can download the shared standard public beta key or request your own unique key directly from the [🔑 How to Get Your Free 90-Day Beta License](https://github.com/FlexITCorp/cognifi-community/discussions/3) discussion.
-- Save this downloaded file as `CogniFi-License.json`.
+- You can download the shared standard public beta key directly: **[Download CogniFi-License.json](https://raw.githubusercontent.com/FlexITCorp/cognifi-community/main/CogniFi-License.json)**.
+- Alternatively, request your own unique key directly from the [🔑 How to Get Your Free 90-Day Beta License](https://github.com/FlexITCorp/cognifi-community/discussions/3) discussion thread.
+- Save this file as `CogniFi-License.json` in your local directory (next to `docker-compose.yml`).
 
 ### First-Time Onboarding
 1. When starting the application for the first time, navigate to `/setup/startup-license` in your browser.
