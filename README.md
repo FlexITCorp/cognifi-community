@@ -26,7 +26,7 @@ CogniFi is distributed as a single lightweight Docker container containing both 
 ### 2. Create the Configuration
 Create a directory on your host (e.g., `cognifi`) and add the following two files:
 
-Download **[docker-compose.yml](https://raw.githubusercontent.com/FlexITCorp/cognifi-community/main/docker-compose.yml)**
+
 
 #### `docker-compose.yml`
 ```yaml
@@ -100,6 +100,7 @@ services:
         reservations:
           memory: 256M
 ```
+**[download docker-compose.yml](https://raw.githubusercontent.com/FlexITCorp/cognifi-community/main/docker-compose.yml)**
 
 #### `.env`
 Create a `.env` file in the same directory to define your secure secrets:
