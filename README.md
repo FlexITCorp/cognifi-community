@@ -6,11 +6,12 @@ CogniFi is a privacy-first, self-hosted personal finance and budgeting applicati
 
 ## 🚀 Key Features
 
-* **Smart Pay-Cycle Budgeting**: Align budget periods with your actual pay schedule (e.g., fortnightly or custom calendar definitions) rather than strict calendar months.
-* **Intelligent Transaction Matching**: Import bank statements (CSV/QIF) and let the rules engine automatically categorize transactions based on vendor patterns.
-* **Recurring Income & Expenses**: Automatically generate monthly budget items from recurring templates.
-* **Multi-User Isolation & Collaboration**: Deploy a single container and support multiple users with secure, isolated data environments.
-* **Privacy & Control**: Keep 100% ownership of your financial data on your own infrastructure.
+* **Smart Pay-Cycle Budgeting**: Align budget periods with your actual pay schedule (e.g., weekly, fortnightly, or custom calendars) rather than forcing everything into strict calendar months.
+* **Dynamic Shift Pay Estimator**: Forecast gross earnings by entering shift hours and tags (`Day`, `Noon`, `Night`). The calculation engine automatically resolves complex base rates, shift allowances, cumulative or compounding multipliers (weekend/holiday), regional public holidays, and midnight crossover split-rate logic.
+* **Intelligent Transaction Matching**: Import bank statements (CSV/QIF) and let the powerful rules engine automatically categorize transactions based on custom vendor matching rules.
+* **Recurring Income & Budget Tracking**: Generate budget items from recurring templates, backed by dedicated recurring income services and interactive dashboard widgets to track upcoming and actual earnings.
+* **Multi-User Isolation & Collaboration**: Deploy a single instance with secure, isolated databases supporting multiple users and tiered accounts (Personal, Family, Professional).
+* **Privacy & Control**: Maintain 100% ownership of your sensitive financial data on your own self-hosted infrastructure.
 
 ---
 
@@ -148,12 +149,13 @@ You can query the following endpoints to verify the status of your deployment:
 
 We are actively developing new enhancements to expand CogniFi's capabilities. Here is what is planned for upcoming releases:
 
-* **Dynamic Shift Pay Estimator & Forecaster (High Priority)**: A proactive earnings forecasting tool where users can simulate upcoming gross pay by entering shift tags (Day/Noon/Night) and hours. Supports complex compounding multipliers, regional public holiday API integrations, and split-rate logic for shifts crossing the midnight boundary.
-* **Household Budget Sharing**: Inviting members, managing roles (Owner/Admin/Member/Viewer), and collaborative budgeting under a shared workspace.
-* **Advanced Reports & Insights**: Enhanced charts showing category-based spending trends, budget-to-actual variance analysis, and net worth/savings rate tracking over time.
-* **Drag-and-Drop Transaction Categorization**: Drag imported bank transactions directly into category folders for fast, visual organizing.
-* **Streamlined Category Management**: A simplified, low-friction workflow to quickly add and organize budget categories and items without labor-intensive forms or multiple clicks.
-* **Bank API Integration**: Automated transaction imports directly from bank feeds (in addition to existing CSV and QIF manual uploads).
+* **Household Budget Sharing**: Invite members, manage roles (Owner/Admin/Member/Viewer), and collaborate on budgeting within a shared workspace (Family/Professional tiers).
+* **Advanced Reports & Insights (Analytics)**: Deep-dive spending trend charts, budget-to-actual variance analysis, and savings rate/net worth tracking.
+* **Mortgage Management & Offset Tracking**: Australian market mortgage calculations, including offset accounts, redraw facility tracking, interest rate scenario models, and refinancing impact analysis.
+* **Drag-and-Drop Transaction Categorization**: A visual workspace to drag imported bank transactions directly into category folders.
+* **Streamlined Category Management**: A low-friction setup wizard and simplified interface to quickly add and structure budget categories without labor-intensive forms.
+* **Automated Bank API Integration**: Connect directly to bank feeds to automate transaction imports alongside CSV and QIF uploads.
+* **Mobile Applications**: Native iOS and Android apps featuring offline support, background synchronization, push notifications, and biometric authentication.
 
 ---
 
