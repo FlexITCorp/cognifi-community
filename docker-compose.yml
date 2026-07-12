@@ -26,9 +26,6 @@ services:
       - Jwt__Issuer=${JWT_ISSUER:-CogniFi}
       - Jwt__Audience=${JWT_AUDIENCE:-CogniFi}
       
-      # License validation public key
-      - License__PublicKey=${LICENSE_PUBLIC_KEY}
-      
       # Startup entitlement file paths
       - Licensing__StartupEntitlement__LicenseFilePath=/app/data/CogniFi-License.json
       - Licensing__StartupEntitlement__ReleaseManifestPath=/app/data/CogniFi-ReleaseManifest.json
