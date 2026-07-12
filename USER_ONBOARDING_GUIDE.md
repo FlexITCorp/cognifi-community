@@ -26,31 +26,79 @@ Create a directory for your application files and add the following `docker-comp
 ```yaml
 services:
   cognifi:
+    build:
+      context: ..
+      dockerfile: Dockerfile
     image: ghcr.io/flexitcorp/cognifi-community:latest
     container_name: cognifi-app
     restart: unless-stopped
+    
     ports:
+      # Map container port 5000 to host port 8080
       - "8080:5000"
+    
     volumes:
-      # Maps your local SQLite data directory
-      - ./data:/app/data
-      # Maps application logs
-      - ./logs:/app/logs
+      # Persist SQLite database on host filesystem
+      - ../data:/app/data
+      # Persist application logs
+      - ../logs:/app/logs
+    
     environment:
+      # Database configuration
       - DATABASE_PATH=/app/data/cognifi.db
-      - Jwt__Key=YOUR_SECURE_JWT_SECRET_KEY_HERE_MIN_32_CHARS
-      - Jwt__Issuer=CogniFi
-      - Jwt__Audience=CogniFi
-      - License__PublicKey=YOUR_BETA_LICENSE_PUBLIC_KEY
+      
+      # JWT Authentication
+      - Jwt__Key=${JWT_SECRET_KEY}
+      - Jwt__Issuer=${JWT_ISSUER:-CogniFi}
+      - Jwt__Audience=${JWT_AUDIENCE:-CogniFi}
+      
+      # Startup entitlement file paths
       - Licensing__StartupEntitlement__LicenseFilePath=/app/data/CogniFi-License.json
-      - TZ=Australia/Sydney # Change to your preferred timezone
+      - Licensing__StartupEntitlement__ReleaseManifestPath=/app/data/CogniFi-ReleaseManifest.json
+      
+      # ASP.NET Core settings
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      
+      # Enable legacy registration for test execution
+      - Features__AllowLegacyRegistration=true
+      
+      # Disable rate limits during local test runs
+      - RateLimiting__AuthLogin__PermitLimit=9999
+      - RateLimiting__RegisterWithLicense__PermitLimit=9999
+      - RateLimiting__StartupUpload__PermitLimit=9999
+      - RateLimiting__AuthRefresh__PermitLimit=9999
+      - RateLimiting__Entitlement__PermitLimit=9999
+      - RateLimiting__LicenseApi__PermitLimit=9999
+      - RateLimiting__ApiGeneral__PermitLimit=9999
+      
+      # Optional: Customize logging level
+      - Logging__LogLevel__Default=Information
+      - Logging__LogLevel__Microsoft.AspNetCore=Warning
+      
+      # Optional: Set timezone (default is UTC)
+      - TZ=Australia/Sydney
+    
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    
+    # Resource limits (optional - adjust based on your needs)
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 256M
 ```
 
 Create a `.env` file in the same directory:
 ```env
 # Change this secret key to a secure 32-character string
 JWT_SECRET_KEY=some_super_secret_signing_key_32_characters_long
-LICENSE_PUBLIC_KEY=your_issued_beta_license_verification_key
 ```
 
 ### Step B: Start the Container
