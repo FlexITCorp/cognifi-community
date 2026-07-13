@@ -57,7 +57,7 @@ Render is a unified cloud platform that builds and runs your apps. Our Render bl
 #### 2. Deploy to Railway
 Railway is a modern hosting platform that makes it extremely simple to deploy applications.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new?template=github.com/FlexITCorp/cognifi-community)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new?template=https://github.com/FlexITCorp/cognifi-community)
 
 1. Click the **Deploy on Railway** button above.
 2. Sign in or sign up to Railway.
