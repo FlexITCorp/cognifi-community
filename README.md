@@ -2,14 +2,28 @@
 
 CogniFi is a privacy-first, self-hosted personal finance and budgeting application designed to help individuals and families track income, expenses, and savings with powerful automation, intelligent matching features, and custom pay-cycle alignment.
 
+![CogniFi Dashboard](docs/images/dashboard.png)
+
 ---
 
 ## 🚀 Key Features
 
 * **Smart Pay-Cycle Budgeting**: Align budget periods with your actual pay schedule (e.g., weekly, fortnightly, or custom calendars) rather than forcing everything into strict calendar months.
+  
+  ![Smart Pay-Cycle Budgeting](docs/images/budget.png)
+
 * **Dynamic Shift Pay Estimator**: Forecast gross earnings by entering shift hours and tags (`Day`, `Noon`, `Night`). The calculation engine automatically resolves complex base rates, shift allowances, cumulative or compounding multipliers (weekend/holiday), regional public holidays, and midnight crossover split-rate logic.
+  
+  ![Dynamic Shift Pay Estimator](docs/images/shift_pay.png)
+
 * **Intelligent Transaction Matching**: Import bank statements (CSV/QIF) and let the powerful rules engine automatically categorize transactions based on custom vendor matching rules.
-* **Recurring Income & Budget Tracking**: Generate budget items from recurring templates, backed by dedicated recurring income services and interactive dashboard widgets to track upcoming and actual earnings.
+  
+  ![Intelligent Transaction Matching](docs/images/transactions.png)
+
+* **Automated Vendor Rules**: Define custom matching rules to instantly categorize transactions on autopilot.
+  
+  ![Vendor Matching Rules](docs/images/vendor_matching_rules.png)
+
 * **Multi-User Isolation & Collaboration**: Deploy a single instance with secure, isolated databases supporting multiple users and tiered accounts (Personal, Family, Professional).
 * **Privacy & Control**: Maintain 100% ownership of your sensitive financial data on your own self-hosted infrastructure.
 
