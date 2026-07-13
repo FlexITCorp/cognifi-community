@@ -20,7 +20,7 @@ services:
       - key: Licensing__StartupEntitlement__LicenseFilePath
         value: /app/data/CogniFi-License.json
       - key: Licensing__StartupEntitlement__ReleaseManifestPath
-        value: /app/data/CogniFi-ReleaseManifest.json
+        value: /app/CogniFi-ReleaseManifest.json
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
       - key: Features__AllowLegacyRegistration

@@ -115,7 +115,7 @@ services:
       
       # Startup entitlement file paths
       - Licensing__StartupEntitlement__LicenseFilePath=/app/data/CogniFi-License.json
-      - Licensing__StartupEntitlement__ReleaseManifestPath=/app/data/CogniFi-ReleaseManifest.json
+      - Licensing__StartupEntitlement__ReleaseManifestPath=/app/CogniFi-ReleaseManifest.json
       
       # ASP.NET Core settings
       - ASPNETCORE_ENVIRONMENT=Development
