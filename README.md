@@ -32,13 +32,53 @@ CogniFi is a privacy-first, self-hosted personal finance and budgeting applicati
 
 ## 📦 Deployment Guide
 
-CogniFi is distributed as a single lightweight Docker container containing both the React frontend and the .NET Web API.
+CogniFi is distributed as a single lightweight Docker container containing both the React frontend and the .NET Web API. You can choose one of the following deployment paths:
 
-### 1. Prerequisites
+*   **[Option A: One-Click Cloud Deployment (Render / Railway)](#option-a-one-click-cloud-deployment-render--railway)** (Recommended for non-technical users)
+*   **[Option B: Self-Hosted Docker Compose (Local / VPS)](#option-b-self-hosted-docker-compose-local--vps)** (For developers and advanced users)
+
+---
+
+### Option A: One-Click Cloud Deployment (Render / Railway)
+
+Get up and running in minutes without managing servers or command lines.
+
+#### 1. Deploy to Render
+Render is a unified cloud platform that builds and runs your apps. Our Render blueprint automatically provisions the container and attaches a persistent SSD disk for your database.
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/FlexITCorp/cognifi-community)
+
+1. Click the **Deploy to Render** button above.
+2. Sign in or create a free Render account.
+3. Render will read `render.yaml` and configure the service automatically.
+4. It will auto-generate a secure `Jwt__Key` and attach a persistent 1GB disk mounted to `/app/data` to keep your SQLite database (`cognifi.db`) and license file safe across deployments.
+5. Once deployment is complete, navigate to your Render service URL (e.g., `https://your-service.onrender.com/setup/startup-license`) to upload your license and complete the setup.
+
+#### 2. Deploy to Railway
+Railway is a modern hosting platform that makes it extremely simple to deploy applications.
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new?template=github.com/FlexITCorp/cognifi-community)
+
+1. Click the **Deploy on Railway** button above.
+2. Sign in or sign up to Railway.
+3. Railway will clone the repository and start building.
+4. **Important**: Once the project is created, you must configure a persistent volume to prevent data loss:
+   - In the Railway project dashboard, click **+ New** (or press `Ctrl+K` / `Cmd+K`) and select **Volume**.
+   - Attach the volume to your `cognifi-app` service.
+   - Go to your service's **Settings** tab, locate **Volumes**, and set the Mount Path to `/app/data`.
+5. Navigate to your Railway app's public URL at `/setup/startup-license` to upload your license and complete the setup.
+
+---
+
+### Option B: Self-Hosted Docker Compose (Local / VPS)
+
+For users who want to host CogniFi on their own hardware or Virtual Private Server (VPS).
+
+#### 1. Prerequisites
 * **Docker & Docker Compose** installed on your host system.
 * **A custom domain and reverse proxy** (e.g., Caddy, Nginx, or Traefik) configured with SSL.
 
-### 2. Create the Configuration
+#### 2. Create the Configuration
 Create a directory on your host (e.g., `cognifi`) and add the following two files:
 
 

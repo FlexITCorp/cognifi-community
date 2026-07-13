@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: cognifi-app
+    runtime: docker
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    disk:
+      name: cognifi-data
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: DATABASE_PATH
+        value: /app/data/cognifi.db
+      - key: Jwt__Key
+        generateValue: true
+      - key: Jwt__Issuer
+        value: CogniFi
+      - key: Jwt__Audience
+        value: CogniFi
+      - key: Licensing__StartupEntitlement__LicenseFilePath
+        value: /app/data/CogniFi-License.json
+      - key: Licensing__StartupEntitlement__ReleaseManifestPath
+        value: /app/data/CogniFi-ReleaseManifest.json
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: Features__AllowLegacyRegistration
+        value: "true"
+      - key: RateLimiting__AuthLogin__PermitLimit
+        value: "9999"
+      - key: RateLimiting__RegisterWithLicense__PermitLimit
+        value: "9999"
+      - key: RateLimiting__StartupUpload__PermitLimit
+        value: "9999"
+      - key: RateLimiting__AuthRefresh__PermitLimit
+        value: "9999"
+      - key: RateLimiting__Entitlement__PermitLimit
+        value: "9999"
+      - key: RateLimiting__LicenseApi__PermitLimit
+        value: "9999"
+      - key: RateLimiting__ApiGeneral__PermitLimit
+        value: "9999"
