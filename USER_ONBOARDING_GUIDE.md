@@ -112,7 +112,14 @@ The application will listen on port `8080` (or whichever port you mapped to host
 1. Download your beta license file (`CogniFi-License.json`).
 2. Open your web browser and navigate to `http://localhost:8080/setup/startup-license`.
 3. Upload the license JSON file. This registers the cryptographic update entitlement for your container.
+   
+   ![CogniFi License Verification and Info Page](docs/images/license_setup.png)
+   
 4. Once verified, click **Continue to Registration** to create your admin account.
+
+Once registration is complete, you will be directed to the main application dashboard:
+
+![CogniFi Dashboard](docs/images/dashboard.png)
 
 ---
 
@@ -124,7 +131,14 @@ Traditional budgeting apps force you to budget from the 1st to the 30th/31st of 
 During the initial Setup Wizard (or inside the **Settings** panel), you can define custom month boundaries:
 * **Standard Calendar Months**: Boundaries align with default month start/end dates.
 * **Custom Month Boundaries**: Define custom starting days (e.g., the 15th of each month). If you define the 15th, your budget month for January will run from **January 15th to February 14th**.
+  
+  ![CogniFi Month Definitions Management](docs/images/month_definitions.png)
+
 * When you import transactions, CogniFi automatically analyzes their dates and assigns them to the correct budget month according to your custom boundaries.
+
+Once configured, your monthly budget layout is updated to track actual available funds for the defined period:
+
+![CogniFi Monthly Budget View](docs/images/budget.png)
 
 ---
 
@@ -138,12 +152,20 @@ For each source of income (e.g., your salary), configure the following:
 * **Amounts**: Track gross, net, and tax deductions.
 * **Pay Period Variations**: For complex pay frequencies, you can define specific pay calendars (e.g., defining how the 3rd paycheck in a 5-week month behaves).
 * **Expected Pay Date**: Enter your regular pay day (e.g., every second Thursday) so the system can project upcoming cash flows on your dashboard.
+  
+  ![Recurring Income Templates](docs/images/recurring_income.png)
 
 ### Recurring Expenses
 Add recurring expense templates for repeating bills:
 * Set name, category (e.g., Housing, Subscriptions), amount, and frequency.
 * Specify whether the amount is fixed (like rent) or variable (like power).
 * The application automatically populates these items into your new monthly budget sheets as they are generated.
+  
+  ![Recurring Expense Templates](docs/images/recurring_expenses.png)
+
+For shift workers, you can configure the dynamic shift pay calculation engine under the Shift Pay panel to project variable income from your shift schedules:
+
+![Dynamic Shift Pay Estimator](docs/images/shift_pay.png)
 
 ---
 
@@ -163,6 +185,14 @@ When you import a statement, many transactions will be "Unmatched."
 2. The UI will prompt you to **Create a Vendor Matching Rule** based on the transaction description.
 3. For example, manual categorization of a transaction from `WOOLWORTHS SUPERMARKETS SYDNEY` will create a rule matching the pattern `WOOLWORTHS`.
 4. On all subsequent uploads, the matching engine will automatically categorize any description containing `WOOLWORTHS` into the *Groceries* budget item.
+
+All matching decisions are visible inside the Transactions ledger:
+
+![Intelligent Transaction Matching](docs/images/transactions.png)
+
+You can view and modify active matching rules in the Rules configuration view:
+
+![Vendor Matching Rules](docs/images/vendor_matching_rules.png)
 
 ---
 
