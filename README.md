@@ -24,6 +24,7 @@ CogniFi is a privacy-first, self-hosted personal finance and budgeting applicati
   
   ![Vendor Matching Rules](docs/images/vendor_matching_rules.png)
 
+* **Household Budget Sharing & Collaboration**: Invite members, manage roles (`Owner`, `Admin`, `Member`, `Viewer`), and collaborate on budgeting within a shared workspace (Family/Professional tiers), with secure context isolation enforced via API middleware.
 * **Multi-User Isolation & Collaboration**: Deploy a single instance with secure, isolated databases supporting multiple users and tiered accounts (Personal, Family, Professional).
 * **Privacy & Control**: Maintain 100% ownership of your sensitive financial data on your own self-hosted infrastructure.
 
@@ -164,7 +165,7 @@ You can query the following endpoints to verify the status of your deployment:
 
 We are actively developing new enhancements to expand CogniFi's capabilities. Here is what is planned for upcoming releases:
 
-* **Household Budget Sharing**: Invite members, manage roles (Owner/Admin/Member/Viewer), and collaborate on budgeting within a shared workspace (Family/Professional tiers).
+
 * **Advanced Reports & Insights (Analytics)**: Deep-dive spending trend charts, budget-to-actual variance analysis, and savings rate/net worth tracking.
 * **Mortgage Management & Offset Tracking**: Australian market mortgage calculations, including offset accounts, redraw facility tracking, interest rate scenario models, and refinancing impact analysis.
 * **Drag-and-Drop Transaction Categorization**: A visual workspace to drag imported bank transactions directly into category folders.

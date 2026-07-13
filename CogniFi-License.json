@@ -1,19 +1,19 @@
 {
-    "licenseKey": "COGNIFI-RLCFJ-93LV5-L24Q9-HHZ9C",
-    "email": "beta@cognifi.store",
-    "customerName": "Beta",
-    "licenseTier": "Personal",
-    "issuedAt": "2026-06-08T03:53:32.7517175Z",
-    "expiresAt": "2026-09-05T03:53:32.7517175Z",
-    "notes": null,
-    "keyId": "default",
-    "signature": "vxuzVmDnLWKZ7zNPbO6nFqVGe/1jgA1DcI+XMcQcfqo2k7KrWiKpMV6BmD0Sr62asLZNHCAdabU09X2PJtHoH1sagRZWtM9dvWr4YjasJvlSTEzABJw3k0PRihIQ0TXeH3HIarCwdUZuxogNPwkw0DdnQryFfgrFyTDEcqX/gh8fTmAe5aMXLlStEYr/GT6Rvrlo4rVLAhH5brP2WWE3LbSDOJsTGIxTsEJjQBEO179KGsNyD70JLFW1VFInvMSHxLJCvKoEaOqdISq9M7AT6c9DMDjHsWFmj4zKzhWN4yY3BDTXcnwiUh4OKSYYr1ZBSha4heBYqhxzvyJFZlkCTA==",
-    "features": {
-        "MaxUsers": 1,
-        "MaxTransactions": -1,
-        "AllowsAnalytics": true,
-        "AllowsMortgageTracking": true,
-        "AllowsWorkspaceSharing": false,
-        "AllowsApiAccess": false
-    }
+  "licenseKey": "COGNIFI-YXJWP-ZKRMQ-2F7ZT-BV7NU",
+  "email": "beta@cognifi.store",
+  "customerName": null,
+  "licenseTier": "Professional",
+  "issuedAt": "2026-07-13T04:08:38.3817433Z",
+  "expiresAt": "2026-10-11T04:08:38.3817732Z",
+  "notes": null,
+  "keyId": "default",
+  "signature": "OwN3ycuSzQnH7apUGaFF2fu3/4WGX5GiqoxlYj2R\u002BjJ0sxdaBDBi2nd2iz\u002BPrIDDwOytyEPfJi4Xd1cV/nZ/nvAZ36N6wh2sLCDP95hq7EzvZMd\u002BiU09qM2nSbui9j3vvjIjK6GY/6zhuI1rDRY51w3\u002BzAOPHFnFGJlZllqw\u002BZ3LsE0c68nQ0RrP6axxPfDCI5BhptOheSFaeV6vTGPxUzPL1fnb7qkyIyNiqaVTfSTjkSyXgTea2yMhI\u002BUE59k8FbT0Tgu\u002BmRBVHE0c348O8PPf4zl3kBVCrSFk\u002BYV1kzN7oRSlUk2FKDSBx7rDQWcDJNIpK4POm\u002BIox47I9\u002BfVSA==",
+  "features": {
+    "MaxUsers": -1,
+    "MaxTransactions": -1,
+    "AllowsAnalytics": true,
+    "AllowsMortgageTracking": true,
+    "AllowsWorkspaceSharing": true,
+    "AllowsApiAccess": true
+  }
 }
